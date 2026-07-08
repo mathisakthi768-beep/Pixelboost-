@@ -1,0 +1,1356 @@
+:root {
+    --bg-color: #f7f9fa;
+    --card-bg: #ffffff;
+    --text-primary: #111111;
+    --text-secondary: #666666;
+    --accent-green: #00bfa5;
+    --accent-blue: #2979ff;
+    --border-color: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    /* Clean technical grid layout feel */
+    background-image: 
+        linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 15px;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.nav-container {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    padding: 12px 24px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: -0.5px;
+}
+
+.cta-mini-btn {
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+/* Layout container */
+.grid-container {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Bento Style Card Defaults */
+section, .price-card {
+    background-color: var(--card-bg);
+    border-radius: 32px;
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+/* Hero Section */
+.hero-section {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+    padding: 60px 10px 30px 10px;
+}
+
+.tagline {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.italic-green {
+    color: var(--accent-green);
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.sub-text {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-primary, .btn-secondary {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    background: #000;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+/* Ticker */
+.ticker-section {
+    background: #000;
+    color: #fff;
+    padding: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ticker-wrapper {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/* About Founder Section */
+.about-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-img-container {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 350px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.profile-badge {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #000;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 16px;
+}
+
+.profile-badge h4 {
+    font-family: serif;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.profile-badge p {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    margin-top: 2px;
+    opacity: 0.7;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.about-content p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skills-tags span {
+    background: #f0f2f5;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Metrics Section */
+.metrics-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.metric-item strong {
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: block;
+}
+
+.metric-item p {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}
+
+/* Pricing Grid */
+.pricing-section {
+    background: transparent;
+    border: none;
+    box-sizing: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+}
+
+.italic-sub {
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.pricing-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.price-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.highlight-card {
+    background-color: #f2fbf7;
+    border-color: #c6f6d5;
+}
+
+.payment-type {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-badge {
+    background: var(--accent-blue);
+    color: white;
+    font-size: 0.65rem;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.price-card h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.features li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.btn-card-action {
+    display: block;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 18px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-card-action.green-btn {
+    background: #00bfa5;
+}
+
+.btn-card-action.blue-btn {
+    background: #2979ff;
+}
+
+/* Accordion FAQ */
+.accordion {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.accordion-item {
+    background: #f9f9f9;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accordion-content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Footer Section */
+.footer-section {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px 20px 20px;
+}
+
+.footer-section h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.btn-footer-cta {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 30px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.sub-footer-text {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    opacity: 0.5;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid #222;
+    margin: 30px 0 20px 0;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socials a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+/* About Founder Section - Updated for better centering and presentation */
+.about-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-img-container {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 380px; /* Adjust height slightly for better framing */
+    background-color: #f0f2f5; /* Fallback background */
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover and object-position: center 
+       will ensure your photo is perfectly centered 
+    */
+    object-fit: cover;
+    object-position: center; 
+    transform: scale(1.05); /* Slight zoom to focus better on the face */
+}
+
+/* Profile Badge - Made smaller and sleeker as requested */
+.profile-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.85); /* Slightly translucent dark for modern look */
+    backdrop-filter: blur(5px);
+    color: #fff;
+    padding: 8px 14px; /* Reduced padding to make it smaller */
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-badge h4 {
+    font-size: 0.95rem; /* Made font size smaller */
+    font-weight: 700;
+    letter-spacing: -0.2px;
+}
+
+.profile-badge p {
+    font-size: 0.55rem; /* Decreased subtitle size */
+    letter-spacing: 0.8px;
+    margin-top: 1px;
+    opacity: 0.8;
+}
+.profile-img-container {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 420px; /* Container height-ai konjam yethirukom frame kulla head nalla vara */
+    background-color: #f0f2f5;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 20% vertical positioning kuduthadhala top portion (head) nalla ulla varum */
+    object-position: center 20%; 
+    transform: none; /* Zoom-ai remove panniyachu head cut aagama iruka */
+}
+/* Pricing Section - Glassmorphism Style Update */
+.pricing-section {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+}
+
+.italic-sub {
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.pricing-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Base Glass Card Design */
+.price-card {
+    background: rgba(255, 255, 255, 0.45); /* Semi-transparent background */
+    backdrop-filter: blur(12px); /* Blurred background behind the card for authentic glass feel */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6); /* Soft glossy white border */
+    border-radius: 32px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.03); /* Subtle soft shadow */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect to make it premium */
+.price-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.06);
+    background: rgba(255, 255, 255, 0.55);
+}
+
+/* First Card Highlighted Accent (Soft Mint Glass) */
+.highlight-card {
+    background: rgba(230, 249, 241, 0.45); 
+    border: 1px solid rgba(198, 246, 213, 0.7);
+}
+.highlight-card:hover {
+    background: rgba(230, 249, 241, 0.55);
+}
+
+.payment-type {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-badge {
+    background: var(--accent-blue);
+    color: white;
+    font-size: 0.65rem;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.price-card h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 12px 0 6px 0;
+    letter-spacing: -0.5px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.features li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #2d3748;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-card-action {
+    display: block;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 18px;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn-card-action:active {
+    transform: scale(0.98);
+}
+
+.btn-card-action.green-btn {
+    background: #00bfa5;
+}
+
+.btn-card-action.blue-btn {
+    background: #2979ff;
+}
+/* --- UNIVERSAL PREMIUM BUTTONS STYLE (Based on 1000131232.jpg) --- */
+
+/* Base Design for all buttons */
+.btn-primary, .btn-secondary, .btn-card-action, .btn-footer-cta, .cta-mini-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: -0.2px;
+    padding: 14px 28px;
+    border-radius: 100px !important; /* Perfect Pill Rounded Shape */
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    border: 2px solid transparent; /* Thick crisp border structure */
+}
+
+/* Hover Effect: All buttons will scale up slightly and lift up like premium glass elements */
+.btn-primary:hover, .btn-secondary:hover, .btn-card-action:hover, .btn-footer-cta:hover, .cta-mini-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary:active, .btn-secondary:active, .btn-card-action:active, .btn-footer-cta:active, .cta-mini-btn:active {
+    transform: translateY(-1px) scale(0.99);
+}
+
+/* 1. Navbar Call Button - Sleek Dark Slate */
+.cta-mini-btn {
+    background: #111111;
+    color: #ffffff;
+    padding: 8px 18px;
+    font-size: 0.8rem;
+}
+.cta-mini-btn:hover {
+    background: #000000;
+}
+
+/* 2. Hero Primary Button - Deep Black Velvet */
+.btn-primary {
+    background: #000000;
+    color: #ffffff;
+    width: 100%;
+}
+.btn-primary:hover {
+    background: #1a1a1a;
+}
+
+/* 3. Hero Secondary Button - Clean Premium White with Crisp Border */
+.btn-secondary {
+    background: #ffffff;
+    color: #111111;
+    border: 2px solid #e2e8f0;
+    width: 100%;
+}
+.btn-secondary:hover {
+    background: #f7f9fa;
+    border-color: #cbd5e1;
+}
+
+/* 4. Pricing Card 1 Button (Landing Page) - Soft Charcoal Grey */
+.btn-card-action.green-btn {
+    background: #222222;
+    color: #ffffff;
+    width: 100%;
+    margin-top: auto;
+}
+.btn-card-action.green-btn:hover {
+    background: #000000;
+}
+
+/* 5. Pricing Card 2 Button (Standard Plan) - Pure Stark White with Dark Border */
+.btn-card-action.blue-btn {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #111111;
+    width: 100%;
+    margin-top: auto;
+}
+.btn-card-action.blue-btn:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
+/* 6. Pricing Card 3 Button (Premium Plan) - Ultra Clean Minimal White */
+.btn-card-action {
+    background: #ffffff;
+    color: #333333;
+    border: 2px solid #e2e8f0;
+    width: 100%;
+    margin-top: auto;
+}
+.btn-card-action:not(.green-btn):not(.blue-btn):hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+/* 7. Big Footer CTA Button - Luxury Platinum White */
+.btn-footer-cta {
+    background: #ffffff;
+    color: #000000;
+    font-size: 1.05rem;
+    padding: 18px 36px;
+    width: 100%;
+    max-width: 100%;
+}
+.btn-footer-cta:hover {
+    background: #f1f5f9;
+}
+
+/* Layout adjust for Hero Buttons to look stacked nicely */
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+}
+/* --- CONTACT SECTION GLASS STYLE --- */
+.contact-card {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 32px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-card h2 {
+    font-size: 2rem;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+.contact-subtext {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+/* Contact Grid Info List */
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 20px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.info-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.info-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.info-link:hover {
+    border-color: var(--text-primary);
+}
+
+.info-text {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Premium Black Rounded Pill WhatsApp Button */
+.btn-whatsapp-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    background: #000000;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 16px 28px;
+    border-radius: 100px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-whatsapp-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    background: #1a1a1a;
+}
+
+.btn-whatsapp-primary:active {
+    transform: translateY(-1px) scale(0.99);
+}
+:root {
+    --bg-color: #f8fafc;
+    --card-bg: rgba(255, 255, 255, 0.55); /* Real glass transparent feel */
+    --text-primary: #0f172a;
+    --text-secondary: #64748b;
+    --accent-green: #059669;
+    --accent-blue: #2563eb;
+    --border-color: rgba(226, 232, 240, 0.8);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    /* Clean technical grid layout feel */
+    background-image: 
+        linear-gradient(to right, rgba(15, 23, 42, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.025) 1px, transparent 1px);
+    background-size: 30px 30px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Navbar Dynamic Blur */
+.navbar {
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.nav-container {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    padding: 10px 20px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.15rem;
+    letter-spacing: -0.8px;
+    color: #000;
+}
+
+/* Layout container */
+.grid-container {
+    max-width: 580px; /* Slightly compacted width for better mobile layout readability */
+    margin: 30px auto 60px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Premium Glass Bento Style Elements */
+section, .price-card, .contact-card {
+    background-color: var(--card-bg);
+    backdrop-filter: blur(16px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+    border-radius: 32px;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px -6px rgba(15, 23, 42, 0.04);
+}
+
+/* Hero Section */
+.hero-section {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+    padding: 50px 0 10px 0;
+}
+
+.tagline {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.hero-section h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.italic-green {
+    color: var(--accent-green);
+    font-style: italic;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.sub-text {
+    color: var(--text-secondary);
+    font-size: 0.98rem;
+    margin-bottom: 28px;
+}
+
+/* Smooth Infinite Loop Sliding Ticker */
+.ticker-section {
+    background: #000000;
+    color: #ffffff;
+    padding: 14px 0;
+    border-radius: 100px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.ticker-wrapper {
+    display: flex;
+    gap: 40px;
+    animation: tickerMove 20s linear infinite;
+    padding-left: 20px;
+}
+
+@keyframes tickerMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.ticker-wrapper span {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+}
+
+/* About Founder Block */
+.profile-img-container {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 400px;
+    background-color: #f1f5f9;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%; 
+}
+
+.profile-badge {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-badge h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+}
+
+.profile-badge p {
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+    margin-top: 1px;
+    opacity: 0.7;
+}
+
+.about-content h2 {
+    font-size: 1.85rem;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.about-content p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skills-tags span {
+    background: rgba(15, 23, 42, 0.05);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Metrics Section Update */
+.metrics-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+    letter-spacing: -0.4px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.metric-item {
+    border-left: 2px solid rgba(15, 23, 42, 0.1);
+    padding-left: 14px;
+}
+
+.metric-item strong {
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: block;
+    line-height: 1.1;
+    color: #000;
+}
+
+.metric-item p {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.8px;
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+/* Pricing Grid Enhancements */
+.pricing-section {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.pricing-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.highlight-card {
+    background: rgba(240, 253, 250, 0.55);
+    border: 1px solid rgba(167, 243, 208, 0.8);
+}
+
+.price-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 12px 0 4px 0;
+    letter-spacing: -0.4px;
+}
+
+.price {
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -1.5px;
+    color: #000;
+}
+
+.features li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+/* Contact Block Stylings */
+.contact-card {
+    gap: 12px;
+}
+
+.contact-card h2 {
+    font-size: 1.85rem;
+    letter-spacing: -0.5px;
+}
+
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 8px;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+    padding-top: 20px;
+}
+
+/* Accordion FAQ UI */
+.accordion {
+    margin-top: 20px;
+}
+
+.accordion-item {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--border-color);
+    margin-bottom: 12px;
+    border-radius: 18px;
+}
+
+/* --- UNIVERSAL PREMIUM BUTTONS STYLE --- */
+.btn-primary, .btn-secondary, .btn-card-action, .btn-footer-cta, .cta-mini-btn, .btn-whatsapp-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 14px 28px;
+    border-radius: 100px !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn-primary:hover, .btn-secondary:hover, .btn-card-action:hover, .btn-footer-cta:hover, .cta-mini-btn:hover, .btn-whatsapp-primary:hover {
+    transform: translateY(-3px) scale(1.015);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary { background: #000; color: #fff; width: 100%; }
+.btn-secondary { background: #fff; color: #111; border: 2px solid #e2e8f0; width: 100%; }
+.cta-mini-btn { background: #000; color: #fff; padding: 8px 18px; font-size: 0.78rem; }
+.btn-whatsapp-primary { background: #000; color: #fff; width: 100%; }
+
+.btn-card-action.green-btn { background: #111111; color: #fff; }
+.btn-card-action.blue-btn { background: #ffffff; color: #000; border: 2px solid #111; }
+.btn-card-action:not(.green-btn):not(.blue-btn) { background: #ffffff; color: #333; border: 2px solid #e2e8f0; }
+
+/* Footer Block CSS */
+.footer-section {
+    background: #000000;
+    color: #ffffff;
+    border-radius: 36px;
+    padding: 48px 24px 24px 24px;
+    text-align: center;
+}
+
+.footer-section h2 {
+    font-size: 2rem;
+    letter-spacing: -0.8px;
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+.btn-footer-cta {
+    background: #ffffff;
+    color: #000000;
+    width: 100%;
+}
+
+.footer-divider {
+    border-top: 1px solid #1e293b;
+    margin: 40px 0 20px 0;
+}
+        /* --- PREMIUM PLAN COMPARISON TABLE STYLING --- */
+        .comparison-table-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comparison-table-card h2 {
+            font-size: 1.8rem;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        /* Responsive horizontal scroll container layout for compact smartphone viewports */
+        .table-responsive-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            /* Soft smooth custom scroll track adjustments */
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Base Custom Table Architect Data */
+        .comparison-matrix {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.92rem;
+            min-width: 460px; /* Prevents extreme element squash on narrow layouts */
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Head Row Layout */
+        .comparison-matrix th, 
+        .comparison-matrix td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+            color: var(--text-primary);
+        }
+
+        .comparison-matrix th {
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.4);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .comparison-matrix th:not(:first-child) {
+            text-align: center;
+            width: 22%;
+        }
+
+        .comparison-matrix td:not(:first-child) {
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Subtle Column Highlight matching the Popular Standard Plan card */
+        .comparison-matrix .highlight-col {
+            background: rgba(240, 253, 250, 0.35);
+            border-left: 1px solid rgba(167, 243, 208, 0.3);
+            border-right: 1px solid rgba(167, 243, 208, 0.3);
+        }
+
+        th.highlight-col {
+            background: rgba(240, 253, 250, 0.6) !important;
+            color: #047857 !important; /* Premium crisp text highlight font color */
+        }
+
+        /* Structural Category Group Headers */
+        .table-group-header td {
+            background: rgba(15, 23, 42, 0.03);
+            font-weight: 700 !important;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            padding: 10px 16px;
+            text-align: left !important;
+        }
+
+        /* Checked Tick icons styling context */
+        .check-icon {
+            color: #059669;
+            font-weight: 800;
+            font-size: 1.05rem;
+        }
